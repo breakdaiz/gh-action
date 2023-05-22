@@ -22,7 +22,7 @@ jobs:
       - name: Install dependecies
         run: npm ci
       - name: Test
-        run: npm test
+        run: npm run test
   deploy:
     runs-on: ubuntu-latest
     steps:

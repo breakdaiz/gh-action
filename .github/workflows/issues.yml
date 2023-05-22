@@ -1,10 +1,10 @@
-name: Issue Events
+name: Hanlde issues
 on:
   issues:
     types: [opened, edited, milestoned]
 jobs:
-  newissue:
+  output-info:
     runs-on: ubuntu-latest
     steps:
-      - name: events
-        run: echo ${{ toJSON(github.event.issues_url) }}
+      - name: Output event Details
+        run: echo ${{ toJSON(github.event) }}
